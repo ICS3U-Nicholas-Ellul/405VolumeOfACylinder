@@ -44,8 +44,8 @@ namespace _405VolumeOfACylinder
             double height;
             double radius;
             double volume;
-            string volumeAsString;
 
+            Control outputText = this.txtVolume; 
             radius = Convert.ToDouble(this.nudRadius.Value);
             height = Convert.ToDouble(this.nudHeight.Value);
 
@@ -54,9 +54,7 @@ namespace _405VolumeOfACylinder
             volume = VolumeOfCylinder(radius, height);
 
             //output
-
-            volumeAsString = Convert.ToString(volume);
-            this.txtVolume.Text = volumeAsString;
+            outputText.Text = Convert.ToString(volume);          
         }
 
         private void mniExit_Click(object sender, EventArgs e)
